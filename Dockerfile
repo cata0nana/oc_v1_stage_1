@@ -72,19 +72,4 @@ EXPOSE 22 9001 9002
 RUN echo 'mogenius:mogenius' | chpasswd
 RUN echo "PLEASE CHANGE THAT AFTER FIRST LOGIN"
 # PLEASE CHANGE THAT AFTER FIRST LOGIN
-ARG UID=1007090001
-ARG GID=1000
-RUN groupadd -g 1000 pythony
 
-RUN useradd --create-home --no-log-init -u "${UID}" -g "${GID}" pythony
-
-RUN $STARTUPDIR/step_2.sh
-RUN $STARTUPDIR/unroot.sh
-COPY xorg.conf /etc/X11/xorg.conf
-#groupadd -g "${GID}" python \
-#  && 
-USER pythony
-CMD ["/usr/bin/Xorg", "-noreset", "+extension", "GLX", "+extension", "RANDR", "+extension", "RENDER", "-logfile", "./xdummy.log", "-config", "/etc/X11/xorg.conf", ":1"]
-
-CMD ["/usr/sbin/sshd", "-D", "-e"]
-CMD [ "/usr/bin/supervisord", "-n" , "-c","/etc/supervisor/supervisord.conf" ]
