@@ -20,8 +20,7 @@ DEBIAN_FRONTEND=noninteractive sudo  apt-get -f install  -y \
 pip3 install selenium==4.0.0.a1 pymysql pyvirtualdisplay faker-e164 Faker PySocks stem  bs4   ConfigParser lxml  speechrecognition requests \
  pyvirtualdisplay pydub pyautogui emojis emoji  \
  mysql-connector-python device_detector selenium-stealth
-
-sudo apt-get install --assume-yes xfce4 desktop-base xfce4-terminal xscreensaver  < /dev/null > /dev/null
+apt-get install --assume-yes xfce4 desktop-base xfce4-terminal xscreensaver  < /dev/null > /dev/null
 apt-get --assume-yes autoclean
 apt-get --assume-yes autoclean
 echo " * 2 ++++++++++++++++++++++++ > DONE !!! S -- N -- M "
