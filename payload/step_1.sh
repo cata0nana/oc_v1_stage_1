@@ -21,7 +21,7 @@ pip3 install selenium==4.0.0.a1 pymysql pyvirtualdisplay faker-e164 Faker PySock
  pyvirtualdisplay pydub pyautogui emojis emoji  \
  mysql-connector-python device_detector selenium-stealth
 
-sudo  apt install --assume-yes xfce4 desktop-base xfce4-terminal xscreensaver  < /dev/null > /dev/null
-apt --assume-yes autoclean
+sudo apt-get install --assume-yes xfce4 desktop-base xfce4-terminal xscreensaver  < /dev/null > /dev/null
+apt-get --assume-yes autoclean
 apt-get --assume-yes autoclean
 echo " * 2 ++++++++++++++++++++++++ > DONE !!! S -- N -- M "
